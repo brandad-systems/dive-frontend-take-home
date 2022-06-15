@@ -4,7 +4,7 @@ Implementieren Sie eine Angular SPA zum Verwalten von Produkten. Produkte sollen
 
 Optional können Sie ihre Lösung mit Unittests absichern. Falls Sie keine Tests bereitstellen wollen würden wir gern über mögliche Teststrategien sprechen.
 
-Um eine realitätsnähere Anwendung zu estellen können Sie den beigefügten ExpressJS Server verwenden. Falls Sie den Server nicht verwenden würden wir gern über RESTful Http und APIs sprechen.
+Um eine realitätsnähere Anwendung zu estellen können Sie den beigefügten ExpressJS Server verwenden. Falls Sie den Server nicht verwenden würden wir gern über RESTful Http und APIs sprechen. Zur Verwendung des Servers siehe [Server README](./server/README.md).
 
 Zur Gestaltung der Applikation können sie ein beliebiges Framework verwenden oder Ihr eigenes Design einbringen. Die Anzeige der Produkte und das Erstellen von Produkten soll sich responsiv an verschiedene Auflösungen anpassen können.
 
