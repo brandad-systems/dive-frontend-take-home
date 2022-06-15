@@ -1,6 +1,6 @@
 # Aufgabe:
 
-Implementieren Sie eine Angular SPA zum Verwalten von Produkten. Produkte sollen angezeigt und hinzugefügt werden können.
+Implementieren Sie eine Angular SPA zum Verwalten von Produkten. Produkte sollen auf einer Übersichtsseite angezeigt werden. Neue Produkte können auf einer eigenen Seite hinzugefügt werden. Nach erfolgreichem hinzufügen soll eine Weiterleitung zur Übersicht erfolgen.
 
 Optional können Sie ihre Lösung mit Unittests absichern. Falls Sie keine Tests bereitstellen wollen würden wir gern über mögliche Teststrategien sprechen.
 
@@ -13,10 +13,10 @@ Zur Gestaltung der Applikation können sie ein beliebiges Framework verwenden od
 Ein Produkt besteht aus:
 - (optional) Bild
 - Titel
-- Beschreibung
+- Beschreibung (maximal 500 Zeichen)
 - Kategorie
 - Status
-- Preis
+- Preis pro Tag
 
 Mögliche Kategorien:
 
