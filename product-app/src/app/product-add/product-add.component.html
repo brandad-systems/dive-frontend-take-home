@@ -1,0 +1,65 @@
+<div class="card-container">
+  <mat-card>
+    <h1>Produkt hinzufügen:</h1>
+    <form [formGroup]="productForm">
+      <input type="file" class="form-control" name="photo" id="photo" ng2FileSelect [uploader]="uploader"
+             formControlName="image"
+      />
+
+      <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+        <mat-label>Titel</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+      <div class="help-block" *ngIf="productForm.value.submitted && productForm.controls['title'].errors">
+        <p> Bitte wähle einen Titel für dein Produkt!</p>
+      </div>
+
+      <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+        <mat-label>Beschreibung</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+      <div class="help-block" *ngIf="productForm.value.submitted && productForm.controls['description'].errors">
+        <p> Bitte wähle eine Beschreibung für dein Produkt (maximal 500 Zeichen)! </p>
+      </div>
+
+      <mat-form-field>
+        <mat-label>Kategorie</mat-label>
+        <mat-select formControlName="category">
+          <mat-optgroup *ngFor="let category of categories" [label]="category.categoryName"
+                        [disabled]="category.disabled">
+            <mat-option *ngFor="let subcategory of category.subcategories" [value]="subcategory.subcategoryName">
+              {{subcategory.subcategoryName}}
+            </mat-option>
+          </mat-optgroup>
+        </mat-select>
+      </mat-form-field>
+      <div class="help-block" *ngIf="productForm.value.submitted && productForm.controls['category'].errors">
+        <p> Bitte wähle eine Category für dein Produkt! </p>
+      </div>
+
+      <mat-label>Status:</mat-label>
+      <mat-radio-group formControlName="status">
+      <span class="radio-button"><mat-radio-button *ngFor="let status of statusOptions"
+                                                   [value]="status">{{status}}</mat-radio-button>
+   </span>
+      </mat-radio-group>
+      <div class="help-block" *ngIf="productForm.value.submitted && productForm.controls['status'].errors">
+        <p> Bitte wähle einen Status für dein Produkt! </p>
+      </div>
+
+
+      <mat-form-field appearance="fill" [floatLabel]="floatLabelControl.value">
+        <mat-label for="title">Preis pro Tag</mat-label>
+        <input matInput type="number" class="right-align" placeholder="0" formControlName="price">
+        <span matSuffix>.00 &#8364;</span>
+      </mat-form-field>
+      <div class="help-block" *ngIf="productForm.value.submitted && productForm.controls['price'].errors">
+        <p> Bitte wähle einen Preis für dein Produkt! </p>
+      </div>
+
+      <button mat-raised-button color="primary" (click)="addProduct()"> Produkt hinzufügen</button>
+
+    </form>
+
+  </mat-card>
+</div>
